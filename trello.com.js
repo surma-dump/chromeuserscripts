@@ -4,7 +4,7 @@
 	}
 	var highlight = function() {
 		getNotifications().each(function() {
-			if($(this).hasClass('read')) {
+			if(!$(this).hasClass('unread')) {
 				$(this).css('background-color', 'transparent');
 			} else {
 				$(this).css('background-color', 'rgba(255,0,0,0.5)');
@@ -26,7 +26,7 @@
 		$button.click(function() {
 			var list = new Array();
 			getNotifications().each(function() {
-				if(!$(this).hasClass('read')) {
+				if($(this).hasClass('unread')) {
 					var link = $(this).find('.phenom-desc > a.action-card').attr('href');
 					if($.inArray(link, list) == -1) {
 						list.push(link);
