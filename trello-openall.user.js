@@ -3,8 +3,8 @@
 // @description	Adds a “Open All” button to the Trello notification page
 // @include      http://trello.com/*
 // @include      https://trello.com/*
-// @match        http://trello.com/*
-// @match        https://trello.com/*
+// @match        http://trello.com/*/notifications
+// @match        https://trello.com/*/notifications
 // ==/UserScript==
 
 // a function that loads jQuery and calls a callback function when jQuery has finished loading
